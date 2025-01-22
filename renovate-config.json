@@ -1,6 +1,7 @@
 {
     "platform": "github",
     "username": "renovate-release",
+    "commitAuthor": "Renovate bot",
     "repositories": [
       "leonardodouradol/renovate"
     ]

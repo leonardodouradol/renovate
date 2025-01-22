@@ -1,26 +1,10 @@
 {
-  "branchPrefix": "test-renovate/",
-  "dryRun": "full",
-  "username": "renovate-release",
-  "gitAuthor": "Renovate Bot <bot@renovateapp.com>",
-  "onboarding": false,
-  "platform": "github",
-  "forkProcessing": "enabled",
-  "repositories": [
-    "leonardodouradol/renovate"
-  ],
+  "extends": ["config:base"],
+  "automerge": false,
   "packageRules": [
     {
-      "description": "lockFileMaintenance",
-      "matchUpdateTypes": [
-        "pin",
-        "digest",
-        "patch",
-        "minor",
-        "major",
-        "lockFileMaintenance"
-      ],
-      "dependencyDashboardApproval": false
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true
     }
   ]
 }

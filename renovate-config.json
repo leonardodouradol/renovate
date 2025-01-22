@@ -1,0 +1,7 @@
+{
+    "platform": "github",
+    "username": "renovate-release",
+    "repositories": [
+      "leonardodouradol/renovate"
+    ]
+  }

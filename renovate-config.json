@@ -4,7 +4,8 @@
     "commitAuthor": "Renovate bot",
     "labels": ["npm"],
     "repositories": [
-      "leonardodouradol/renovate"
+        "Pagnet/mfe-suppliers-bureau",
+        "leonardodouradol/renovate"
     ],
     "packageRules": [
         {

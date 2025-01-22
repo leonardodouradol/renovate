@@ -6,11 +6,6 @@
   "onboarding": false,
   "platform": "github",
   "forkProcessing": "enabled",
-  "repositories": [
-    "renovatebot/github-action",
-    "renovate-tests/cocoapods1",
-    "renovate-tests/gomod1"
-  ],
   "packageRules": [
     {
       "description": "lockFileMaintenance",

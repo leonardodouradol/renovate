@@ -20,7 +20,7 @@
         "major",
         "lockFileMaintenance"
       ],
-      "dependencyDashboardApproval": false,
+      "dependencyDashboardApproval": false
     }
   ]
 }

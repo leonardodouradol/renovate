@@ -2,7 +2,14 @@
     "platform": "github",
     "username": "renovate-release",
     "commitAuthor": "Renovate bot",
+    "labels": ["npm"],
     "repositories": [
       "leonardodouradol/renovate"
-    ]
+    ],
+    "packageRules": [
+        {
+          "packagePatterns": ["*"],
+          "commitAuthor": "Renovate Bot <bot@renovateapp.com>"
+        }
+      ]
   }

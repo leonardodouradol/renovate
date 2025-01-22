@@ -6,6 +6,9 @@
   "onboarding": false,
   "platform": "github",
   "forkProcessing": "enabled",
+  "repositories": [
+    "leonardodouradol/renovate"
+  ],
   "packageRules": [
     {
       "description": "lockFileMaintenance",
@@ -18,7 +21,6 @@
         "lockFileMaintenance"
       ],
       "dependencyDashboardApproval": false,
-      "minimumReleaseAge": 0
     }
   ]
 }

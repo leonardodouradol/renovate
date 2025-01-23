@@ -2,9 +2,9 @@
     "platform": "github",
     "username": "renovate-release",
     "commitAuthor": "Renovate bot",
-    "labels": ["npm"],
+    "labels": ["dependencies"],
+    "dependencyDashboard": false,
     "repositories": [
-        "Pagnet/mfe-suppliers-bureau",
         "leonardodouradol/renovate"
     ],
     "packageRules": [

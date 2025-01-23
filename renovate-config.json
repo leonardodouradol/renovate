@@ -7,9 +7,6 @@
     "username": "renovate-release",
     "commitAuthor": "Renovate bot",
     "labels": ["dependencies"],
-    "dependencyDashboard": {
-        "enabled": false
-    },
     "repositories": [
         "leonardodouradol/renovate"
     ],

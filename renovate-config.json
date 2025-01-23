@@ -3,7 +3,7 @@
         "config:recommended",
         ":disableDependencyDashboard"
       ],
-      "prTitle": "[Renovate-bot] {{title}}",
+    "prTitle": "[Renovate-bot] {{depName}}: Update to {{newVersion}}",
     "platform": "github",
     "username": "renovate-release",
     "commitAuthor": "Renovate bot",

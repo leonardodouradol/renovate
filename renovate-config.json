@@ -3,6 +3,7 @@
         "config:recommended",
         ":disableDependencyDashboard"
       ],
+    "prTitle": "[Renovate-bot] {{depName}}: Update to {{newVersion}}",
     "platform": "github",
     "username": "renovate-release",
     "commitAuthor": "Renovate bot",
@@ -12,8 +13,7 @@
     ],
     "packageRules": [
         {
-          "packagePatterns": ["*"],
-          "commitAuthor": "Renovate Bot <bot@renovateapp.com>"
+          "packagePatterns": ["*"]
         }
       ]
   }

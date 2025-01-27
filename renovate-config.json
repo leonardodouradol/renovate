@@ -1,6 +1,5 @@
 {
     "extends": [
-        "config:recommended",
         ":disableDependencyDashboard"
       ],
     "prTitle": "[Renovate-bot] {{depName}}: Update to {{newVersion}}",
@@ -11,9 +10,10 @@
     "repositories": [
         "leonardodouradol/renovate"
     ],
-    "packageRules": [
-        {
-          "packagePatterns": ["*"]
-        }
-      ]
+ "packageRules": [
+    {
+      "packagePatterns": ["^@useblu/"],
+      "matchUpdateTypes": ["minor", "patch"]
+    }
+  ]
   }

@@ -3,6 +3,7 @@
     "config:base"
   ],
   "automerge": false,
+  "ignoreDeps": ["*"], 
   "packageRules": [
     {
       "matchPackageNames": ["@useblu/blu-lytics"],

@@ -4,15 +4,14 @@
   "username": "renovate-release",
   "commitAuthor": "Renovate bot",
   "labels": ["dependencies"],
-  "dependencyDashboard": true,
   "repositories": [
     "leonardodouradol/renovate"
   ],
   "packageRules": [
     {
       "matchPackageNames": ["@useblu/blu-lytics"],
-      "groupName": "Blu Lytics Updates",
-      "dependencyDashboardApproval": true
+      "groupName": "Blu Lytics Updates"
     }
-  ]
+  ],
+  "ignoreDeps": ["*"]
 }

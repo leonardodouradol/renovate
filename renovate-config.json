@@ -12,7 +12,7 @@
     ],
  "packageRules": [
     {
-      "packagePatterns": ["^@useblu/"],
+      "matchPackageNames": ["@useblu/*"],
       "matchUpdateTypes": ["minor", "patch"]
     }
   ]

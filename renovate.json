@@ -6,7 +6,7 @@
   "automerge": false,
   "packageRules": [
     {
-      "matchPackageNames": ["@useblu/*"],
+      "matchPackageNames": ["@useblu/blu-lytics"],
       "matchUpdateTypes": ["minor", "patch"]
     }
   ]

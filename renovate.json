@@ -6,7 +6,7 @@
   "automerge": false,
   "packageRules": [
     {
-      "matchPackagePatterns": ["^@useblu/"],
+      "matchPackageNames": ["@useblu/*"],
       "matchUpdateTypes": ["minor", "patch"]
     }
   ]

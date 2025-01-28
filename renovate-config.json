@@ -1,18 +1,19 @@
 {
-    "extends": [
-        ":disableDependencyDashboard"
-      ],
-    "prTitle": "[Renovate-bot] {{depName}}: Update to {{newVersion}}",
-    "platform": "github",
-    "username": "renovate-release",
-    "commitAuthor": "Renovate bot",
-    "labels": ["dependencies"],
-    "repositories": [
-        "leonardodouradol/renovate"
-    ],
- "packageRules": [
+  "extends": [
+    ":disableDependencyDashboard"
+  ],
+  "prTitle": "[Renovate-bot] {{depName}}: Update to {{newVersion}}",
+  "platform": "github",
+  "username": "renovate-release",
+  "commitAuthor": "Renovate bot",
+  "labels": ["dependencies"],
+  "repositories": [
+    "leonardodouradol/renovate"
+  ],
+  "packageRules": [
     {
-        "matchPackageNames": ["@useblu/blu-lytics"],
+      "matchPackageNames": ["@useblu/blu-lytics"],
+      "groupName": "Blu Lytics Updates"
     }
   ]
-  }
+}

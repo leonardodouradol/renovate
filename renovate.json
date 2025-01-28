@@ -3,11 +3,15 @@
     "config:base"
   ],
   "automerge": false,
-  "ignoreDeps": ["*"], 
   "packageRules": [
     {
+      "matchPackagePatterns": ["*"],
+      "enabled": false
+    },
+    {
       "matchPackageNames": ["@useblu/blu-lytics"],
-      "groupName": "Blu Lytics Updates"
+      "groupName": "Blu Lytics Updates",
+      "enabled": true
     }
   ]
 }

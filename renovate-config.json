@@ -13,7 +13,6 @@
  "packageRules": [
     {
         "matchPackageNames": ["@useblu/blu-lytics"],
-      "matchUpdateTypes": ["minor", "patch"]
     }
   ]
   }

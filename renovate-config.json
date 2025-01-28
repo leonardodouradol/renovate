@@ -1,14 +1,12 @@
 {
-  "prTitle": "[Renovate-bot] {{depName}}: Update to {{newVersion}}",
+  "commitMessage": "[Renovate-bot] {{depName}}: Update to {{newVersion}}",
   "platform": "github",
   "username": "renovate-release",
-  "commitAuthor": "Renovate bot",
   "labels": ["dependencies"],
   "dependencyDashboard": true,
   "repositories": [
     "leonardodouradol/renovate"
   ],
-  "enabled": false,
   "packageRules": [
     {
       "matchPackageNames": ["@useblu/blu-lytics"],

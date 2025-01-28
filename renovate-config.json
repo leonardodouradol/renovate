@@ -1,7 +1,4 @@
 {
-  "extends": [
-    ":disableDependencyDashboard"
-  ],
   "prTitle": "[Renovate-bot] {{depName}}: Update to {{newVersion}}",
   "platform": "github",
   "username": "renovate-release",
@@ -13,7 +10,8 @@
   "packageRules": [
     {
       "matchPackageNames": ["@useblu/blu-lytics"],
-      "groupName": "Blu Lytics Updates"
+      "groupName": "Blu Lytics Updates",
+      "dependencyDashboardApproval": true
     }
   ]
 }

@@ -1,9 +1,12 @@
 {
+  "extends": [
+    "config:base",
+    ":disableDependencyDashboard"
+  ],
   "commitMessage": "[Renovate-bot] {{depName}}: Update to {{newVersion}}",
   "platform": "github",
   "username": "renovate-release",
   "labels": ["dependencies"],
-  "dependencyDashboard": true,
   "repositories": [
     "leonardodouradol/renovate"
   ],
@@ -11,7 +14,6 @@
     {
       "matchPackageNames": ["@useblu/blu-lytics"],
       "groupName": "Blu Lytics Updates",
-      "dependencyDashboardApproval": true,
       "enabled": true
     }
   ]

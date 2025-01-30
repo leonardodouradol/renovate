@@ -1,3 +1,8 @@
+name: Renovate Self-Hosted
+
+on:
+  workflow_dispatch:
+
 jobs:
   renovate:
     runs-on: ubuntu-latest

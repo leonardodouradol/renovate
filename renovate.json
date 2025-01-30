@@ -9,6 +9,14 @@
     "package-lock.json",
     "**/package-lock.json"
   ],
+  "hostRules": [
+    {
+      "matchHost": "github.com",
+      "yarn": {
+        "force": true
+      }
+    }
+  ],
   "packageRules": [
     {
       "matchPackagePatterns": ["*"],

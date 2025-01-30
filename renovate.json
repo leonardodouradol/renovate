@@ -4,7 +4,11 @@
     ":disableDependencyDashboard"
   ],
   "automerge": false,
-  "ignorePaths": ["package-lock.json"],
+  "binarySource": "docker",
+  "ignorePaths": [
+    "package-lock.json",
+    "**/package-lock.json"
+  ],
   "packageRules": [
     {
       "matchPackagePatterns": ["*"],

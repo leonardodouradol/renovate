@@ -23,11 +23,11 @@ jobs:
       - name: Install dependencies using Yarn
         run: yarn install --frozen-lockfile
 
-      - name: Remove package-lock.json if created
-        run: rm -f package-lock.json
-
       - name: Run Renovate
         uses: renovatebot/github-action@v41.0.9
         with:
           token: ${{ secrets.RENOVATE_TOKEN }}
           configurationFile: renovate-config.json
+
+      - name: Remove package-lock.json if created
+        run: rm -f package-lock.json

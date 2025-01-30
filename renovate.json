@@ -4,6 +4,8 @@
     ":disableDependencyDashboard"
   ],
   "automerge": false,
+  "packageManager": "yarn",
+  "ignorePaths": ["package-lock.json"],
   "packageRules": [
     {
       "matchPackagePatterns": ["*"],

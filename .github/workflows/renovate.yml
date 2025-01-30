@@ -11,6 +11,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4.2.2
 
+      - name: Set Node.js version
+        uses: actions/setup-node@v4
+        with:
+          node-version: 16
+          cache: 'yarn'
+
       - name: Set Yarn as default package manager
         run: echo "YARN_ENABLE_SCRIPTS=0" >> $GITHUB_ENV
 

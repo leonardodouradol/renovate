@@ -1,14 +1,14 @@
 {
-  "extends": [
+   "extends": [
     "config:base",
     ":disableDependencyDashboard"
   ],
   "automerge": false,
   "binarySource": "docker",
-  "ignorePaths": [
-    "package-lock.json",
-    "**/package-lock.json"
-  ],
+  "ignorePaths": ["package-lock.json", "**/package-lock.json"],
+  "npm": { 
+    "enabled": false
+  },
   "enabledManagers": ["yarn"],
   "packageRules": [
     {

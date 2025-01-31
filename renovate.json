@@ -1,5 +1,5 @@
 {
-   "extends": [
+  "extends": [
     "config:base",
     ":disableDependencyDashboard"
   ],
@@ -14,6 +14,9 @@
       "matchPackageNames": ["@useblu/blu-lytics"],
       "groupName": "Blu Lytics Updates",
       "enabled": true
+    },
+    {
+      "matchFiles": ["package-lock.json"],
+      "enabled": false
     }
   ]
-}

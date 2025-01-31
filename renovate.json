@@ -4,7 +4,6 @@
     ":disableDependencyDashboard"
   ],
   "automerge": false,
-  "binarySource": "docker",
   "ignorePaths": ["package-lock.json", "**/package-lock.json"],
   "npm": { 
     "enabled": false

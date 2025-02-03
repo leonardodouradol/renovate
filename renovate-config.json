@@ -22,4 +22,8 @@
       "enabled": true
     },
   ]
+   "postUpgradeTasks": {
+    "commands": ["yarn install"],
+    "executionMode": "update"
+  }
 }

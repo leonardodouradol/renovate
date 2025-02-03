@@ -13,10 +13,17 @@
   ],
   "automerge": false,
   "packageRules": [
-    {
-      "matchPackageNames": ["@useblu/blu-lytics", "@useblu/ocean-react", "@useblu/ocean-icons-react", "@useblu/ocean-core", "@useblu/utils", "@useblu/ocean-tokens", "@useblu/ocean-icons", "@useblu/ocean-core"],
-      "groupName": "@useblu packages",
-      "enabled": true
-    }
+  {
+    "matchPackageNames": [
+      "@useblu/blu-lytics",
+      "@useblu/ocean-react",
+      "@useblu/ocean-icons-react",
+      "@useblu/ocean-core",
+      "@useblu/utils",
+      "@useblu/ocean-tokens",
+      "@useblu/ocean-icons"
+    ],
+    "enabled": true
+  }
   ]
 }

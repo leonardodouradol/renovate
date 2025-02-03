@@ -5,6 +5,7 @@
   ],
   "automerge": false,
   "skipInstalls": true,
+  "updateLockFiles": false,
   "ignorePaths": ["package-lock.json", "**/package-lock.json"],
   "postUpdateOptions": ["yarnDedupeHighest"],
   "packageRules": [

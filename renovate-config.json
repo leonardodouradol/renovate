@@ -3,6 +3,7 @@
     "config:base",
     ":disableDependencyDashboard"
   ],
+  "skipInstalls": true,
   "commitMessage": "[Renovate-bot] {{depName}}: Update to {{newVersion}}",
   "platform": "github",
   "username": "renovate-release",

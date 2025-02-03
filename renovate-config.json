@@ -3,7 +3,6 @@
     "config:base",
     ":disableDependencyDashboard"
   ],
-  "skipInstalls": true,
   "updateLockFiles": true,
   "platform": "github",
   "username": "renovate-release",

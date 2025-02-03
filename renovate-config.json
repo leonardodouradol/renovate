@@ -1,19 +1,21 @@
 {
   "extends": [
-    "config:base",
+    "config:recommended",
     ":disableDependencyDashboard"
   ],
+  "prTitle": "[Renovate-bot] {{depName}}: Update to {{newVersion}}",
   "platform": "github",
   "username": "renovate-release",
+  "commitAuthor": "Renovate bot",
   "labels": ["dependencies"],
   "repositories": [
-    "leonardodouradol/renovate"
+    "Pagnet/mfe-suppliers-bureau"
   ],
+  "automerge": false,
   "packageRules": [
     {
-      "matchPackageNames": ["@useblu/blu-lytics"],
-      "groupName": "Blu Lytics Updates",
-      "enabled": true
+      "packagePatterns": ["^@useblu/"],
+      "matchUpdateTypes": ["minor", "patch"]
     }
   ]
 }

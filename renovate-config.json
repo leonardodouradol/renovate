@@ -21,7 +21,7 @@
       "groupName": "Blu Lytics Updates",
       "enabled": true
     },
-  ]
+  ],
    "postUpgradeTasks": {
     "commands": ["yarn install"],
     "executionMode": "update"

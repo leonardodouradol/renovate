@@ -4,6 +4,7 @@
     ":disableDependencyDashboard"
   ],
   "automerge": false,
+  "skipInstalls": true,
   "ignorePaths": ["package-lock.json", "**/package-lock.json"],
   "postUpdateOptions": ["yarnDedupeHighest"],
   "packageRules": [

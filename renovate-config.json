@@ -4,7 +4,7 @@
     ":disableDependencyDashboard"
   ],
   "skipInstalls": true,
-  "updateLockFiles": false,
+  "updateLockFiles": true,
   "platform": "github",
   "username": "renovate-release",
   "labels": ["dependencies"],
@@ -20,10 +20,8 @@
       "matchPackageNames": ["@useblu/blu-lytics"],
       "groupName": "Blu Lytics Updates",
       "enabled": true
-    },
+    }
   ],
-   "postUpgradeTasks": {
-    "commands": ["yarn install"],
-    "executionMode": "update"
-  }
+  "npmrc": "yarn=true",
+  "postUpdateOptions": ["yarnDedupeHighest"]
 }

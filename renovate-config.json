@@ -11,11 +11,14 @@
   ],
   "packageRules": [
     {
+      "matchPackagePatterns": ["*"],
+      "enabled": false
+    },
+    {
       "matchPackageNames": ["@useblu/blu-lytics"],
       "groupName": "Blu Lytics Updates",
       "enabled": true
     }
   ],
   "npmrc": "yarn=true",
-  "postUpdateOptions": ["yarnDedupeHighest", "updateLockFiles"]
 }

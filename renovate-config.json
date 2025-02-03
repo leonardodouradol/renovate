@@ -3,7 +3,6 @@
     "config:base",
     ":disableDependencyDashboard"
   ],
-  "updateLockFiles": true,
   "platform": "github",
   "username": "renovate-release",
   "labels": ["dependencies"],

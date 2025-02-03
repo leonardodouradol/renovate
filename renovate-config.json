@@ -20,5 +20,4 @@
       "enabled": true
     }
   ],
-  "npmrc": "yarn=true",
 }

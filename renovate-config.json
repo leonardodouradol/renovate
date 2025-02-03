@@ -15,7 +15,8 @@
   "packageRules": [
     {
       "packagePatterns": ["^@useblu/"],
-      "matchUpdateTypes": ["minor", "patch"]
+      "matchUpdateTypes": ["minor", "patch"],
+      "enabled": true
     }
   ]
 }

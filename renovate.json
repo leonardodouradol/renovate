@@ -5,6 +5,7 @@
   ],
   "automerge": false,
   "ignorePaths": ["package-lock.json", "**/package-lock.json"],
+  "postUpdateOptions": ["yarnDedupeHighest"],
   "packageRules": [
     {
       "matchPackagePatterns": ["*"],

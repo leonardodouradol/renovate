@@ -9,7 +9,7 @@
   "commitAuthor": "Renovate bot",
   "labels": ["dependencies"],
   "repositories": [
-    "Pagnet/mfe-suppliers-bureau"
+    "leonardodouradol/renovate"
   ],
   "automerge": false,
   "packageRules": [

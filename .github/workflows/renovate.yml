@@ -17,3 +17,6 @@ jobs:
           token: ${{ secrets.RENOVATE_TOKEN }}
           configurationFile: renovate-config.json
 
+      - name: Install dependencies with Yarn
+        run: yarn install
+

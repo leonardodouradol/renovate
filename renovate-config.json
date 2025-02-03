@@ -5,7 +5,6 @@
   ],
   "skipInstalls": true,
   "updateLockFiles": false,
-  "commitMessage": "[Renovate-bot] {{depName}}: Update to {{newVersion}}",
   "platform": "github",
   "username": "renovate-release",
   "labels": ["dependencies"],
@@ -22,9 +21,5 @@
       "groupName": "Blu Lytics Updates",
       "enabled": true
     },
-    {
-      "matchFiles": ["package-lock.json"],
-      "enabled": false
-    }
   ]
 }

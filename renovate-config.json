@@ -4,6 +4,7 @@
     ":disableDependencyDashboard"
   ],
   "skipInstalls": true,
+  "updateLockFiles": false,
   "commitMessage": "[Renovate-bot] {{depName}}: Update to {{newVersion}}",
   "platform": "github",
   "username": "renovate-release",

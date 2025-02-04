@@ -16,6 +16,10 @@
         "@useblu/ocean-icons"
       ],
       "enabled": true
+    },
+    {
+      "matchPackagePatterns": ["*"],
+      "enabled": false
     }
-    ]
+  ]
   }

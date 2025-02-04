@@ -5,6 +5,10 @@
     ],
     "automerge": false,
     "packageRules": [
+       {
+      "matchPackagePatterns": ["*"],
+      "enabled": false
+    },
     {
       "matchPackageNames": [
         "@useblu/blu-lytics",
@@ -16,10 +20,6 @@
         "@useblu/ocean-icons"
       ],
       "enabled": true
-    },
-    {
-      "matchPackagePatterns": ["*"],
-      "enabled": false
     }
   ]
   }

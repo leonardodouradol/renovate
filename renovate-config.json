@@ -12,18 +12,22 @@
     "leonardodouradol/renovate"
   ],
   "automerge": false,
-  "packageRules": [
-  {
-    "matchPackageNames": [
-      "@useblu/blu-lytics",
-      "@useblu/ocean-react",
-      "@useblu/ocean-icons-react",
-      "@useblu/ocean-core",
-      "@useblu/utils",
-      "@useblu/ocean-tokens",
-      "@useblu/ocean-icons"
-    ],
-    "enabled": true
-  }
+ "packageRules": [
+    {
+      "matchPackageNames": [
+        "@useblu/blu-lytics",
+        "@useblu/ocean-react",
+        "@useblu/ocean-icons-react",
+        "@useblu/ocean-core",
+        "@useblu/utils",
+        "@useblu/ocean-tokens",
+        "@useblu/ocean-icons"
+      ],
+      "enabled": true
+    },
+    {
+      "matchPackagePatterns": ["*"],
+      "enabled": false
+    }
   ]
 }

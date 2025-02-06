@@ -19,20 +19,21 @@ jobs:
       id: get-version
       run: |
         # Extrai a versão mais recente do arquivo src/teste.ts
-        version=$(grep -oP 'navigation-menu-cache-v\K\d+' src/teste.ts | sort -n | tail -n 1)
+        version=$(grep -oP 'const version = \K\d+' src/teste.ts | sort -n | tail -n 1)
         echo "version=$version" >> $GITHUB_ENV
 
     - name: Increment the cache version
       id: increment-version
       run: |
+        # Incrementa a versão
         new_version=$((version + 1))
         echo "new_version=$new_version" >> $GITHUB_ENV
         echo "New cache version: v$new_version"
 
     - name: Update version in the code
       run: |
-        # Substitui a versão antiga pela nova versão no arquivo src/teste.ts
-        sed -i "s/navigation-menu-cache-v${{ env.version }}/navigation-menu-cache-v${{ env.new_version }}/g" src/teste.ts
+        # Substitui apenas a versão no arquivo src/teste.ts
+        sed -i "s/const version = ${version}/const version = ${new_version}/g" src/teste.ts
 
     - name: Commit changes
       run: |

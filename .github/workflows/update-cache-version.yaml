@@ -1,0 +1,44 @@
+name: Update Cache Version on Pull Request
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]  # Dispara quando o PR for aberto, sincronizado ou reaberto
+
+jobs:
+  update-cache-version:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout the repository
+      uses: actions/checkout@v2  # Certifique-se de que está usando a versão correta da ação
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3  # Atualize para v3, caso v2 não funcione
+
+    - name: Get the current version of the cache
+      id: get-version
+      run: |
+        # Captura o número da versão mais alta no arquivo teste.ts
+        version=$(grep -oP 'navigation-menu-cache-v\K\d+' src/teste.ts | sort -n | tail -n 1)
+        echo "version=$version" >> $GITHUB_ENV
+
+    - name: Increment the cache version
+      id: increment-version
+      run: |
+        # Incrementa a versão
+        new_version=$((version + 1))
+        echo "new_version=$new_version" >> $GITHUB_ENV
+        echo "New cache version: v$new_version"
+
+    - name: Update version in the code
+      run: |
+        # Substitui a versão antiga no arquivo teste.ts pelo novo número de versão
+        sed -i "s/navigation-menu-cache-v${{ env.version }}/navigation-menu-cache-v${{ env.new_version }}/g" src/teste.ts
+
+    - name: Commit changes
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        git add src/teste.ts
+        git commit -m "Increment cache version to v${{ env.new_version }}"
+        git push

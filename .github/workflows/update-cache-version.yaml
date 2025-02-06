@@ -15,12 +15,10 @@ jobs:
     - name: Checkout the repository
       uses: actions/checkout@v2
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-
     - name: Get the current version of the cache
       id: get-version
       run: |
+        # Extrai a versão mais recente do arquivo src/teste.ts
         version=$(grep -oP 'navigation-menu-cache-v\K\d+' src/teste.ts | sort -n | tail -n 1)
         echo "version=$version" >> $GITHUB_ENV
 
@@ -33,6 +31,7 @@ jobs:
 
     - name: Update version in the code
       run: |
+        # Substitui a versão antiga pela nova versão no arquivo src/teste.ts
         sed -i "s/navigation-menu-cache-v${{ env.version }}/navigation-menu-cache-v${{ env.new_version }}/g" src/teste.ts
 
     - name: Commit changes
@@ -42,7 +41,7 @@ jobs:
         git add src/teste.ts
         git commit -m "Increment cache version to v${{ env.new_version }}"
 
-        # Certifique-se de atualizar seu repositório local antes do push
+        # Faz o pull da branch do pull request
         git pull origin ${{ github.head_ref }} --rebase
 
         # Autentica o Git usando o GITHUB_TOKEN

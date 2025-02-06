@@ -1,29 +1,33 @@
 {
   "extends": [
-    "config:base",
+    "config:recommended",
     ":disableDependencyDashboard"
   ],
-  "skipInstalls": true,
-  "updateLockFiles": false,
+  "prTitle": "[Renovate-bot] {{depName}}: Update to {{newVersion}}",
   "platform": "github",
   "username": "renovate-release",
+  "commitAuthor": "Renovate bot",
   "labels": ["dependencies"],
   "repositories": [
     "leonardodouradol/renovate"
   ],
-  "packageRules": [
-    {
+  "automerge": false,
+ "packageRules": [
+       {
       "matchPackagePatterns": ["*"],
       "enabled": false
     },
     {
-      "matchPackageNames": ["@useblu/blu-lytics"],
-      "groupName": "Blu Lytics Updates",
+      "matchPackageNames": [
+        "@useblu/blu-lytics",
+        "@useblu/ocean-react",
+        "@useblu/ocean-icons-react",
+        "@useblu/ocean-core",
+        "@useblu/utils",
+        "@useblu/ocean-tokens",
+        "@useblu/ocean-icons"
+      ],
       "enabled": true
-    },
-  ],
-   "postUpgradeTasks": {
-    "commands": ["yarn install"],
-    "executionMode": "update"
-  }
+    }
+  ]
 }

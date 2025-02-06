@@ -1,3 +1,25 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json"
-}
+    "extends": [
+      "config:base",
+      ":disableDependencyDashboard"
+    ],
+    "automerge": false,
+    "packageRules": [
+       {
+      "matchPackagePatterns": ["*"],
+      "enabled": false
+    },
+    {
+      "matchPackageNames": [
+        "@useblu/blu-lytics",
+        "@useblu/ocean-react",
+        "@useblu/ocean-icons-react",
+        "@useblu/ocean-core",
+        "@useblu/utils",
+        "@useblu/ocean-tokens",
+        "@useblu/ocean-icons"
+      ],
+      "enabled": true
+    }
+  ]
+  }

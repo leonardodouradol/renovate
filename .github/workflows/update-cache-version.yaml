@@ -5,7 +5,7 @@ on:
     types: [opened, synchronize, reopened]
 
 permissions:
-  contents: write  # Permite que o GitHub Actions faça commits e push no repositório
+  contents: write
 
 jobs:
   update-cache-version:
@@ -18,21 +18,18 @@ jobs:
     - name: Get the current version of the cache
       id: get-version
       run: |
-        # Extrai a versão mais recente do arquivo src/teste.ts
         version=$(grep -oP 'const version = \K\d+' src/teste.ts | sort -n | tail -n 1)
         echo "version=$version" >> $GITHUB_ENV
 
     - name: Increment the cache version
       id: increment-version
       run: |
-        # Incrementa a versão
         new_version=$((version + 1))
         echo "new_version=$new_version" >> $GITHUB_ENV
         echo "New cache version: v$new_version"
 
     - name: Update version in the code
       run: |
-        # Substitui apenas a versão no arquivo src/teste.ts
         sed -i "s/const version = ${version}/const version = ${new_version}/g" src/teste.ts
 
     - name: Commit changes
@@ -41,12 +38,6 @@ jobs:
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
         git add src/teste.ts
         git commit -m "Increment cache version to v${{ env.new_version }}"
-
-        # Faz o pull da branch do pull request
         git pull origin ${{ github.head_ref }} --rebase
-
-        # Autentica o Git usando o GITHUB_TOKEN
         git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
-
-        # Fazendo o push para o branch correto
         git push origin HEAD:${{ github.head_ref }}

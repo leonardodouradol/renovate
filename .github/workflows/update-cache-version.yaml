@@ -42,5 +42,8 @@ jobs:
         git add src/teste.ts
         git commit -m "Increment cache version to v${{ env.new_version }}"
         
+        # Autentica o Git usando o GITHUB_TOKEN
+        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+        
         # Fazendo o push para o branch correto
         git push origin HEAD:${{ github.head_ref }}

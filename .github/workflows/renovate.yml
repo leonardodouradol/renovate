@@ -26,5 +26,5 @@ jobs:
         run: yarn install
 
       - name: Revert changes in package-lock.json if modified
-        run: git checkout -- package-lock.json
+        run: git reset --hard && git checkout -- package-lock.json
 

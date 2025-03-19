@@ -13,8 +13,6 @@
   "prConcurrentLimit": 1,
   "automerge": false,
   "branchPrefix": "renovate/",
-  "prCreation": "not-pending",
-  "recreateWhen": "always",
   "packageRules": [
     {
       "matchPackagePatterns": ["*"],

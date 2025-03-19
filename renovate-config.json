@@ -29,6 +29,7 @@
         "@useblu/ocean-tokens",
         "@useblu/ocean-icons"
       ],
+      "updateTypes": ["minor", "patch", "major"]
       "groupName": "all-dependencies",
       "commitMessage": "[Renovate-bot] Update all @useblu dependencies",
       "allowedVersions": "/.*/",

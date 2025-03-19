@@ -34,7 +34,20 @@
       "enabled": true
     }
   ],
-  "ignorePaths": ["**/node_modules/**", "**/dist/**", "**/build/**", "**/package-lock.json", "package-lock.json"],
+  "ignorePaths": [
+    "**/node_modules/**",
+    "**/dist/**",
+    "**/build/**",
+    "**/package-lock.json"
+  ],
+  "ignoreDeps": [
+    "package-lock.json"
+  ],
+  "postUpgradeTasks": [
+    {
+      "command": "git checkout -- package-lock.json"
+    }
+  ],
   "allowedCommands": ["yarn install --frozen-lockfile"],
   "semanticCommits": "enabled",
   "fileFilters": ["package.json", "yarn.lock"]

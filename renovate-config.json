@@ -31,11 +31,7 @@
         "@useblu/ocean-icons"
       ],
       "groupName": "all-dependencies",
-      "commitMessage": {
-        "prefix": "[Renovate-bot]",
-        "message": "Update all dependencies",
-        "suffix": " - grouped updates"
-      },
+      "commitMessage": "[Renovate-bot] Update all dependencies - grouped updates",
       "allowedVersions": "/.*/",
       "enabled": true
     }

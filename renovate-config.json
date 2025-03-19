@@ -29,7 +29,7 @@
         "@useblu/ocean-icons"
       ],
       "groupName": "all-dependencies",
-      "commitMessage": "[Renovate-bot] Update all dependencies - grouped updates",
+      "commitMessage": "[Renovate-bot] Update all @useblu dependencies",
       "allowedVersions": "/.*/",
       "enabled": true
     }

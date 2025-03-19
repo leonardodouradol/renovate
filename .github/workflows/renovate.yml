@@ -22,9 +22,3 @@ jobs:
           token: ${{ secrets.RENOVATE_TOKEN }}
           configurationFile: renovate-config.json
 
-      - name: Install dependencies with Yarn
-        run: yarn install
-
-      - name: Revert changes in package-lock.json if modified
-        run: git reset --hard && git checkout -- package-lock.json
-

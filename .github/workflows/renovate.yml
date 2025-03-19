@@ -25,3 +25,6 @@ jobs:
       - name: Install dependencies with Yarn
         run: yarn install
 
+      - name: Revert changes in package-lock.json if modified
+        run: git checkout -- package-lock.json
+

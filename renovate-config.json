@@ -3,7 +3,6 @@
     "config:recommended",
     ":disableDependencyDashboard"
   ],
-  "prTitle": "[Renovate-bot] Update dependencies",
   "platform": "github",
   "username": "renovate-release",
   "labels": ["dependencies"],
@@ -19,7 +18,7 @@
   "packageRules": [
     {
       "matchPackagePatterns": ["*"],
-      "enabled": false,
+      "enabled": false
     },
     {
       "matchPackageNames": [
@@ -32,8 +31,11 @@
         "@useblu/ocean-icons"
       ],
       "groupName": "all-dependencies",
-      "commitMessageSuffix": " - grouped updates",
-      "commitMessage": "[Renovate-bot] Update all dependencies",
+      "commitMessage": {
+        "prefix": "[Renovate-bot]",
+        "message": "Update all dependencies",
+        "suffix": " - grouped updates"
+      },
       "allowedVersions": "/.*/",
       "enabled": true
     }

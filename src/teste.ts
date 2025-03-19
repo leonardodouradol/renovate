@@ -1,4 +1,4 @@
-const version = 1;
+const version = 4;
 const globalKey = `navigation-menu-cache-v${version}`;
 const cacheKey = (uuid: string) => `navigation-menu-cache-v${version}`;
 const cacheExpireKey = `navigation-menu-cache-expire-v${version}`;

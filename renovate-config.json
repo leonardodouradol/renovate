@@ -6,7 +6,6 @@
   "prTitle": "[Renovate-bot] Update dependencies",
   "platform": "github",
   "username": "renovate-release",
-  "commitAuthor": "Renovate bot",
   "labels": ["dependencies"],
   "repositories": [
     "leonardodouradol/renovate"
@@ -16,11 +15,11 @@
   "automerge": false,
   "branchPrefix": "renovate/",
   "prCreation": "not-pending",
-  "recreateClosed": true,
+  "recreateWhen": "always",
   "packageRules": [
     {
       "matchPackagePatterns": ["*"],
-      "enabled": false
+      "enabled": false,
     },
     {
       "matchPackageNames": [
@@ -34,13 +33,13 @@
       ],
       "groupName": "all-dependencies",
       "commitMessageSuffix": " - grouped updates",
-      "prTitle": "[Renovate-bot] Update all dependencies",
+      "commitMessage": "[Renovate-bot] Update all dependencies",
       "allowedVersions": "/.*/",
       "enabled": true
     }
   ],
   "ignorePaths": ["**/node_modules/**", "**/dist/**", "**/build/**"],
-  "allowedPostUpgradeCommands": ["yarn install --frozen-lockfile"],
-  "semanticCommits": true,
+  "allowedCommands": ["yarn install --frozen-lockfile"],
+  "semanticCommits": "enabled",
   "fileFilters": ["package.json", "yarn.lock"]
 }

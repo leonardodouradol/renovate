@@ -13,7 +13,7 @@
   "prConcurrentLimit": 1,
   "automerge": false,
   "branchPrefix": "renovate/",
-  "rangeStrategy": "pin",
+  "rangeStrategy": "update",
   "packageRules": [
     {
       "matchPaths": ["**/package-lock.json"],

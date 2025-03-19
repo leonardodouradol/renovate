@@ -34,7 +34,7 @@
       "enabled": true
     }
   ],
-  "ignorePaths": ["**/node_modules/**", "**/dist/**", "**/build/**"],
+  "ignorePaths": ["**/node_modules/**", "**/dist/**", "**/build/**", "**/package-lock.json"],
   "allowedCommands": ["yarn install --frozen-lockfile"],
   "semanticCommits": "enabled",
   "fileFilters": ["package.json", "yarn.lock"]

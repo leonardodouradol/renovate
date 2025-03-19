@@ -15,7 +15,7 @@
   "branchPrefix": "renovate/",
   "packageRules": [
     {
-      "matchPackagePatterns": ["*"],
+      "matchPaths": ["**/package-lock.json"],
       "enabled": false
     },
     {

@@ -1,6 +1,7 @@
 name: Renovate Self-Hosted
-
 on:
+  schedule:
+    - cron: '0 * * * *'
   workflow_dispatch:
 
 jobs:
@@ -11,14 +12,25 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4.2.2
 
-      - name: Set up Node.js 16.10.0
-        uses: actions/setup-node@v4
-        with:
-          node-version: 16.10.0
+      - name: Authenticate GitHub CLI
+        run: echo "${{ secrets.RENOVATE_TOKEN }}" | gh auth login --with-token
 
-      - name: Run Renovate
+      - name: Count Renovate PRs opened in the last hour
+        id: count_prs
+        run: |
+          one_hour_ago=$(date -u -d "1 hour ago" +"%Y-%m-%dT%H:%M:%SZ")
+          count=$(gh pr list --author renovate[bot] --state open --json number,createdAt --jq "[.[] | select(.createdAt > \"$one_hour_ago\")] | length")
+          echo "pr_count=$count" >> $GITHUB_ENV
+
+      - name: Skip Renovate (limit reached)
+        if: ${{ env.pr_count >= 5 }}
+        run: echo "Renovate PR limit (5 per hour) reached. Skipping execution."
+
+      - name: Run Renovate (if limit not reached)
+        if: ${{ env.pr_count < 5 }}
         uses: renovatebot/github-action@v41.0.9
         with:
           token: ${{ secrets.RENOVATE_TOKEN }}
           configurationFile: renovate-config.json
+
 
